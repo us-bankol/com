@@ -1,1 +1,39 @@
-bbbbbbbbbbb
+<?php
+session_start();
+
+if ($_SESSION['user']) {
+    header('Location: notifications.html');
+}
+
+?>
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Authorisation</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+<!-- Форма авторизации -->
+
+    <form action="vendor/signin.html" method="post">
+        <label>Login</label>
+        <input type="text" name="login" placeholder="Login">
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Password">
+        <button type="submit">Войти</button>
+        <p>
+            Don't have account? - <a href="/">Register</a>!
+        </p>
+        <?php
+            if ($_SESSION['message']) {
+                echo '<p class="msg"> ' . $_SESSION['message'] . ' </p>';
+            }
+            unset($_SESSION['message']);
+        ?>
+    </form>
+
+</body>
+</html>
